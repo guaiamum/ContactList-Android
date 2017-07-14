@@ -57,11 +57,39 @@ namespace ContactList
 			}
 		}
 		
+		public partial class Id
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int addButton = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int contactListView = 2131034113;
+			
+			// aapt resource value: 0x7f050003
+			public const int emailImageView = 2131034115;
+			
+			// aapt resource value: 0x7f050002
+			public const int nameTextView = 2131034114;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Id()
+			{
+			}
+		}
+		
 		public partial class Layout
 		{
 			
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int view_contact = 2130903041;
 			
 			static Layout()
 			{
@@ -76,11 +104,11 @@ namespace ContactList
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
-			
 			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			public const int ApplicationName = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int add_contact = 2130968577;
 			
 			static String()
 			{

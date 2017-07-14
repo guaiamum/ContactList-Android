@@ -13,6 +13,15 @@ namespace ContactList
 
             // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
+
+            //Button
+            Button button = FindViewById<Button>(Resource.Id.addButton);
+
+            button.Click += delegate { };
+
+            var contactListView = FindViewById<ListView>(Resource.Id.contactListView);
+
+            //contactListView.Adapter = 
         }
     }
 }
