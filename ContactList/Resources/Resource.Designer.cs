@@ -45,7 +45,16 @@ namespace ContactList
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int contact = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int email_icon = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int Icon = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int phone_icon = 2130837507;
 			
 			static Drawable()
 			{
@@ -66,11 +75,17 @@ namespace ContactList
 			// aapt resource value: 0x7f050001
 			public const int contactListView = 2131034113;
 			
-			// aapt resource value: 0x7f050003
-			public const int emailImageView = 2131034115;
+			// aapt resource value: 0x7f050004
+			public const int emailImageView = 2131034116;
 			
 			// aapt resource value: 0x7f050002
 			public const int nameTextView = 2131034114;
+			
+			// aapt resource value: 0x7f050005
+			public const int phoneImageView = 2131034117;
+			
+			// aapt resource value: 0x7f050003
+			public const int phoneNumberTextView = 2131034115;
 			
 			static Id()
 			{

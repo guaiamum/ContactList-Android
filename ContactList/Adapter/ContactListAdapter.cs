@@ -35,10 +35,31 @@ namespace ContactList.Adapter
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
+            ContactViewHolder viewHolder = null;
+
             if (convertView == null)
             {
-                //convertView = this.parent.LayoutInflater.Inflate()
+                convertView = this.parent.LayoutInflater.Inflate(Resource.Layout.view_contact, null);
+
+                viewHolder = new ContactViewHolder()
+                {
+                    NameTextView = convertView.FindViewById<TextView>(Resource.Id.nameTextView),
+                    PhoneTextView = convertView.FindViewById<TextView>(Resource.Id.phoneImageView),
+                    EmailImageView = convertView.FindViewById<ImageView>(Resource.Id.emailImageView),
+                    PhoneImageView= convertView.FindViewById<ImageView>(Resource.Id.phoneImageView),
+                };
+
+                convertView.Tag = viewHolder;
             }
+
+            if (viewHolder == null)
+            {
+                viewHolder = convertView.Tag as ContactViewHolder;
+            }
+            var contact = contacts[position];
+
+            viewHolder.NameTextView.Text = contact.Name;
+            viewHolder.PhoneTextView.Text = contact.PhoneNumber;
 
             return convertView;
         }

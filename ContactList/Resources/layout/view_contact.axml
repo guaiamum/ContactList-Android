@@ -2,30 +2,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-  <LinearLayout
-    android:layout_width="0dp"
     android:layout_height="match_parent"
-    android:layout_weight="1"
-    android:orientation="vertical">
-
-    <TextView
-      android:id="@+id/nameTextView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:textSize="17sp"
-      android:textColor="@android:color/background_dark"
-      android:layout_marginBottom="5dp"/>
-
-    <TextView
-      android:id="@+id/nameTextView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:textSize="15sp"
-      android:textColor="@android:color/darker_gray"/>
-  </LinearLayout>
-  <ImageView
-    android:id="@+id/emailImageView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+  
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@android:color/background_dark"
+            android:layout_marginBottom="5dp" />
+        <TextView
+            android:id="@+id/phoneNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+  
+    <ImageView
+        android:id="@+id/emailImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/email_icon"
+        android:layout_marginRight="5dp" />
+  
+    <ImageView
+        android:id="@+id/phoneImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone_icon" />
+  
 </LinearLayout>
