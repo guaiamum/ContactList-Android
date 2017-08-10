@@ -3,4 +3,5 @@
   <string name="ApplicationName">ContactList</string>
   <string name="add_contact">Add Contact</string>
 
+  <color name="light_gray">#D3D3D3</color>
 </resources>

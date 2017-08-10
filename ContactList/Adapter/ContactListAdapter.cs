@@ -44,7 +44,7 @@ namespace ContactList.Adapter
                 viewHolder = new ContactViewHolder()
                 {
                     NameTextView = convertView.FindViewById<TextView>(Resource.Id.nameTextView),
-                    PhoneTextView = convertView.FindViewById<TextView>(Resource.Id.phoneImageView),
+                    PhoneTextView = convertView.FindViewById<TextView>(Resource.Id.phoneNumberTextView),
                     EmailImageView = convertView.FindViewById<ImageView>(Resource.Id.emailImageView),
                     PhoneImageView= convertView.FindViewById<ImageView>(Resource.Id.phoneImageView),
                 };
