@@ -49,6 +49,12 @@ namespace ContactList.Adapter
                     PhoneImageView= convertView.FindViewById<ImageView>(Resource.Id.phoneImageView),
                 };
 
+                viewHolder.EmailImageView.Click += EmailImageViewClicked;
+                viewHolder.PhoneImageView.Click += PhoneImageViewClicked;
+
+                viewHolder.EmailImageView.Tag = position;
+                viewHolder.PhoneImageView.Tag = position;
+
                 convertView.Tag = viewHolder;
             }
 
@@ -63,5 +69,24 @@ namespace ContactList.Adapter
 
             return convertView;
         }
+
+        private void EmailImageViewClicked(object sender, EventArgs args)
+        {
+            var contact = contacts[(int) (sender as ImageView).Tag];
+            var intent = new Intent(Intent.ActionSend);
+            intent.PutExtra(Intent.ExtraEmail, new string[] {contact.Email});
+
+            parent.StartActivity(intent);
+        }
+        private void PhoneImageViewClicked(object sender, EventArgs args)
+        {
+            var contact = contacts[(int)(sender as ImageView).Tag];
+
+            var intent = new Intent(Intent.ActionDial);
+            intent.SetData(Android.Net.Uri.Parse($"tel:{ contact.PhoneNumber }"));
+
+            parent.StartActivity(intent);
+        }
+        
     }
 }

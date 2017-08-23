@@ -36,6 +36,27 @@ namespace ContactList.Activities
             var contactListView = FindViewById<ListView>(Resource.Id.contactListView);
             adapter = new ContactListAdapter(contactList, this);
             contactListView.Adapter = adapter;
+
+            contactListView.ItemLongClick += ItemLongClicked;
+        }
+
+        private void ItemLongClicked(object sender, AdapterView.ItemLongClickEventArgs args)
+        {
+            var contact = contactList[args.Position];
+
+            var alert = new AlertDialog.Builder(this).Create();
+
+            alert.SetTitle("Delete Item?");
+            alert.SetMessage($"Are you sure you want to delete {contact.Name}?");
+
+            alert.SetButton("No", delegate{});
+            alert.SetButton2("Yes", delegate
+            {
+                contactList.Remove(contact);
+                adapter.NotifyDataSetChanged();
+            });
+
+            alert.Show();
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
